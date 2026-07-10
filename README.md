@@ -1,4 +1,4 @@
-# GenPark Coupon Recommendation Agent Skill
+# genpark-coupon-recommendation-skill
 
 This repository contains the **GenPark Coupon Recommendation Agent Skill** — an agent configuration skill config (`skill.json`), a production-ready Python SDK client (`coupon_recommender.py`), and executable verification tests. It is designed to compare cart contents against a list of active discount vouchers, verify minimum spend thresholds and category constraints, and return the optimal coupon code.
 
