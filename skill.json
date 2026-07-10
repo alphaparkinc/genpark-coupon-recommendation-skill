@@ -2,31 +2,62 @@
   "name": "genpark-coupon-recommendation-skill",
   "description": "GenPark dynamic coupon recommendation skill. Compares basket value, category matches, and active coupon codes to recommend the highest discount.",
   "version": "1.0.0",
-  "author": "alphaparkinc",
+  "author": "genpark",
   "inputs": {
     "cart_items": {
       "type": "array",
       "items": {
         "properties": {
-          "sku": { "type": "string" },
-          "price": { "type": "number" },
-          "quantity": { "type": "integer" },
-          "category": { "type": "string" }
+          "sku": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "category": {
+            "type": "string"
+          }
         },
-        "required": ["sku", "price", "quantity", "category"]
+        "required": [
+          "sku",
+          "price",
+          "quantity",
+          "category"
+        ]
       }
     },
     "available_coupons": {
       "type": "array",
       "items": {
         "properties": {
-          "code": { "type": "string" },
-          "discount_type": { "type": "string", "enum": ["percent", "fixed"] },
-          "discount_value": { "type": "number" },
-          "min_spend": { "type": "number" },
-          "applicable_category": { "type": "string" }
+          "code": {
+            "type": "string"
+          },
+          "discount_type": {
+            "type": "string",
+            "enum": [
+              "percent",
+              "fixed"
+            ]
+          },
+          "discount_value": {
+            "type": "number"
+          },
+          "min_spend": {
+            "type": "number"
+          },
+          "applicable_category": {
+            "type": "string"
+          }
         },
-        "required": ["code", "discount_type", "discount_value"]
+        "required": [
+          "code",
+          "discount_type",
+          "discount_value"
+        ]
       }
     }
   },
@@ -34,18 +65,30 @@
     "recommended_coupon": {
       "type": "object",
       "properties": {
-        "code": { "type": "string" },
-        "savings_amount": { "type": "number" }
+        "code": {
+          "type": "string"
+        },
+        "savings_amount": {
+          "type": "number"
+        }
       }
     },
     "savings_breakdown": {
       "type": "array",
       "items": {
         "properties": {
-          "code": { "type": "string" },
-          "eligible": { "type": "boolean" },
-          "savings": { "type": "number" },
-          "reason": { "type": "string" }
+          "code": {
+            "type": "string"
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "savings": {
+            "type": "number"
+          },
+          "reason": {
+            "type": "string"
+          }
         }
       }
     }
